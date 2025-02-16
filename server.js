@@ -21,4 +21,6 @@ app.get('/home', (req, res) => {
     res.status(200).json('Welcome, your app is working well');
   });
 
-module.exports = app;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+ });
