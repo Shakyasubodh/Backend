@@ -17,7 +17,9 @@ app.use(express.json());
 
 app.use("/api/items", itemRoutes);
 
-app.get('/home', (req, res) => {
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
+app.get('/api/home', (req, res) => {
     res.status(200).json('Welcome, your app is working well');
   });
 
